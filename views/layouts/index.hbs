@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Plyr Clone</title>
+    <meta name="HandheldFriendly" content="True" />
+
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="icon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link rel="stylesheet" type="text/css" href="./css/foundation.min.css" />
+    <link rel="stylesheet" type="text/css" href="./plyr/plyr.css" />
+    <link rel="stylesheet" type="text/css" href="./css/app.css" />
+</head>
+<body>
+{{{body}}}
+<script src="/plyr/plyr.min.js"></script>
+
+<script type="module">
+
+    const player = new Plyr('#player', {
+                debug: false,
+                title: "View From A Blue Moon",
+                keyboard: {
+                    global: true
+                },
+                tooltips: {
+                    controls: true
+                },
+                previewThumbnails: {
+                    enabled: true,
+                    src: ["https://cdn.plyr.io/static/demo/thumbs/100p.vtt", "https://cdn.plyr.io/static/demo/thumbs/240p.vtt"]
+                },
+            }
+
+      );
+    let el =document.getElementById('video_container');
+//
+    player.on('ready', event => {
+
+        console.log("player ready");
+        setTimeout(function(){
+            el.classList.remove("loading");
+        },1000)
+    });
+
+</script>
+
+</body>
+</html>

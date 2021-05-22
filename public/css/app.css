@@ -1,0 +1,101 @@
+body {
+  background-color: #EFFAFF; }
+
+.h100 {
+  height: 100vh; }
+
+:root {
+  --plyr-color-main: #00b3ff;
+  --plyr-font-size-base: 13px;
+  --plyr-font-size-small: 12px;
+  --plyr-font-size-time: 11px;
+  --plyr-font-size-badges: 9px;
+  --plyr-font-size-menu: var(--plyr-font-size-base);
+  --plyr-font-weight-regular: 500;
+  --plyr-font-weight-bold: 600;
+  --plyr-font-size-captions-medium: 18px;
+  --plyr-font-size-captions-large: 21px; }
+
+@font-face {
+  font-display: swap;
+  font-family: Gordita;
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://cdn.plyr.io/static/fonts/gordita-light.woff2) format("woff2"), url(https://cdn.plyr.io/static/fonts/gordita-light.woff) format("woff"); }
+@font-face {
+  font-display: swap;
+  font-family: Gordita;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://cdn.plyr.io/static/fonts/gordita-regular.woff2) format("woff2"), url(https://cdn.plyr.io/static/fonts/gordita-regular.woff) format("woff"); }
+@font-face {
+  font-display: swap;
+  font-family: Gordita;
+  font-style: normal;
+  font-weight: 500;
+  src: url(https://cdn.plyr.io/static/fonts/gordita-medium.woff2) format("woff2"), url(https://cdn.plyr.io/static/fonts/gordita-medium.woff) format("woff"); }
+@font-face {
+  font-display: swap;
+  font-family: Gordita;
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://cdn.plyr.io/static/fonts/gordita-bold.woff2) format("woff2"), url(https://cdn.plyr.io/static/fonts/gordita-bold.woff) format("woff"); }
+@font-face {
+  font-display: swap;
+  font-family: Gordita;
+  font-style: normal;
+  font-weight: 900;
+  src: url(https://cdn.plyr.io/static/fonts/gordita-black.woff2) format("woff2"), url(https://cdn.plyr.io/static/fonts/gordita-black.woff) format("woff"); }
+@keyframes fadein {
+  0% {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes shrinkHide {
+  0% {
+    opacity: .5;
+    width: 38px; }
+  20% {
+    width: 45px; }
+  to {
+    opacity: 0;
+    width: 0; } }
+html {
+  font-size: 100%; }
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: #4a5764;
+  font-family: Gordita,Avenir,Helvetica Neue,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-size: 15px;
+  font-size: .9375rem;
+  font-weight: 500;
+  line-height: 1.75; }
+
+.plyr {
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  margin: 16px auto; }
+
+#video_container {
+  position: relative; }
+  #video_container .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; }
+  #video_container > div {
+    transition: opacity 300ms ease,transform 300ms ease;
+    opacity: 1;
+    transform: translateY(0); }
+  #video_container.loading .loader {
+    display: block; }
+  #video_container.loading video {
+    display: none; }
+  #video_container.loading > div {
+    opacity: 0;
+    transform: translateY(1rem); }
+
+/*# sourceMappingURL=app.css.map */
