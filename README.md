@@ -14,3 +14,5 @@ Then run the app
 node index 
 ```
 
+
+visit http://localhost:3000/ to view the player
